@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="#B50A35"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/textOfName"
+            android:layout_marginTop="100dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:hint="请输入用户名"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawablePadding="10dp"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+        <EditText
+            android:id="@+id/textOfPassWord"
+            android:layout_width="278dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="10dp"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            />
+
+        <ImageView
+            android:id="@+id/showPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_visibility_off_24"
+            android:background="@color/white"
+            android:onClick="showPassword"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+    >
+        <TextView
+            android:id="@+id/mess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#DDC91F"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/forgetPW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#DDC91F"
+            android:onClick="forgetPassWord"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#DDC91F"
+            android:text="第一次登录？点击注册"
+            android:onClick="register"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/surbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="sureBtn1"
+            android:text="确认"/>
+
+        <Button
+            android:id="@+id/btnCan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="取消"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/goToListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击显示ListView"/>
+
+        <Button
+            android:id="@+id/goToFruitListView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击显示使用ListView水果清单"/>
+
+        <Button
+            android:id="@+id/goToNewsRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击显示RecyclerView新闻清单"/>
+
+    </LinearLayout>
+
+</LinearLayout>

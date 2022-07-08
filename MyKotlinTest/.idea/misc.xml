@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/android_sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.21979166666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_group_24.xml" value="0.2395" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1805" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.2395" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.2395" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.2715" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_widgets_24.xml" value="0.2395" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/addredd_list_item.xml" value="0.21145833333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/address_fragment.xml" value="0.23489583333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/found_layout.xml" value="0.23489583333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/found_list_item.xml" value="0.21145833333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fragment_test1.xml" value="0.171875" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fragment_test2.xml" value="0.171875" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fruit_layout.xml" value="0.21979166666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fruit_main.xml" value="0.25" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/hello_master.xml" value="0.26666666666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/layout.xml" value="0.33" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/message_fragment.xml" value="0.23489583333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/message_list_item.xml" value="0.21145833333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/my_fragment.xml" value="0.23489583333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/my_item_list.xml" value="0.21145833333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/my_listview_test.xml" value="0.25" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/news_item_layout.xml" value="0.2265625" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/news_main_activity.xml" value="0.2265625" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/register_activity.xml" value="0.25" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/thanks_activity.xml" value="0.25" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/thanks_again.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

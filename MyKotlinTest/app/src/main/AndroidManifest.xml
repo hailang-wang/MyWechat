@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hikvision.mykotlintest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyKotlinTest">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--新建一个activity要注册到这个清单列表中-->
+        <activity android:name=".ThanksActivity"></activity>
+        <activity android:name=".ThankAgain"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".MyListViewTest"/>
+        <activity android:name=".FruitListMain"/>
+
+        <activity android:name=".recycle.NewsMainActivity"/>
+    </application>
+
+</manifest>
