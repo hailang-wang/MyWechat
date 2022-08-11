@@ -34,9 +34,11 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/dou2" />
-
+                android:src="@drawable/dou2"
+                android:scaleType="centerCrop"
+                />
         </androidx.cardview.widget.CardView>
+
         <EditText
             android:id="@+id/textOfName"
             android:layout_marginTop="10dp"

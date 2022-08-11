@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="60dp">
+    android:layout_height="80dp">
 
     <ImageView
 
         android:id="@+id/addressItemImage"
         android:layout_width="50dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_height="50dp"/>
 
     <LinearLayout
@@ -25,8 +25,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
-            android:textSize="30dp"
+            android:textSize="40dp"
             android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
             />
     </LinearLayout>
 

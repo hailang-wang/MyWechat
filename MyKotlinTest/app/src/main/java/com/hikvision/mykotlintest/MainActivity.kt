@@ -16,7 +16,6 @@ import androidx.annotation.CallSuper
 import com.hikvision.mykotlintest.database.dao.UserDao
 import com.hikvision.mykotlintest.database.database.AppDatabase
 import com.hikvision.mykotlintest.recycle.NewsMainActivity
-import com.hikvision.mykotlintest.util.KeyboardSetting
 import com.hikvision.mykotlintest.util.KeyboardUtils
 
 
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         lateinit var btnGoToFruitView:Button
         lateinit var btnGoToNewsRecyclerView:Button
         lateinit var btnGoToDatabasePractice:Button
-        lateinit var btnGoToKeyboard:Button
+
 
         lateinit var btnGoToRegister:Button
 
@@ -64,11 +63,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 //自定义键盘测试
-                btnGoToKeyboard=findViewById(R.id.goToKeyBoard)
-                btnGoToKeyboard.setOnClickListener {
-                        //点击跳转到其他的界面去处理自定义的键盘
-                        startActivity(Intent(this,KeyboardActivity::class.java))
-                }
+
                 //这里需要想恢复出用户名
                 btnGoToRegister=findViewById(R.id.goToRegister)
                 btnGoToRegister.setOnClickListener {

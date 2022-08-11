@@ -18,6 +18,7 @@
             android:text="你好"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:layout_weight="1"/>
 
         <ImageView
@@ -25,6 +26,7 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_gravity="right"
+            android:scaleType="centerCrop"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             />
