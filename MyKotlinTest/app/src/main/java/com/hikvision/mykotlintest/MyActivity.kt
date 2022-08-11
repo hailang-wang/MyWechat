@@ -20,6 +20,7 @@ class MyActivity:Fragment() {
                 myRecyclerView.adapter=MyAdapter(mys)
                 return view
         }
+
         fun initValue(){
                 mys=ArrayList()
                 for(i in 1..50){
@@ -27,7 +28,7 @@ class MyActivity:Fragment() {
                         //仅仅是为了好区分
                         image = when {
                                 i % 3 == 0 -> {
-                                        R.drawable.ic_baseline_lock_24
+                                        R.drawable.dog
                                 }
                                 i % 3 == 1 -> {
                                         R.drawable.ic_baseline_person_24

@@ -1,6 +1,7 @@
 package com.hikvision.mykotlintest
 
 import com.hikvision.mykotlintest.classTest.Apple
+import com.hikvision.mykotlintest.classTest.MyClass
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -105,6 +106,12 @@ class ExampleUnitTest {
         apple.name()
     }
 
+
+    @Test
+    fun testInit(){
+        var myclass=MyClass(2,"wq","as")
+
+    }
 
 
 

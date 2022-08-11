@@ -2,7 +2,6 @@ package com.hikvision.mykotlintest
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
 import android.view.MotionEvent
@@ -12,6 +11,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.CallSuper
 import androidx.appcompat.app.AppCompatActivity
+import com.hikvision.mykotlintest.database.dao.UserDao
+import com.hikvision.mykotlintest.database.database.AppDatabase
+import com.hikvision.mykotlintest.database.entity.User
 import com.hikvision.mykotlintest.util.KeyboardUtils
 
 class RegisterActivity : AppCompatActivity() {
@@ -30,9 +32,13 @@ class RegisterActivity : AppCompatActivity() {
         private var flag2=false
         private var success=false
 
+        private lateinit var userDao: UserDao
+
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.register_activity)
+
+
 
                 name = findViewById<EditText>(R.id.username)
                 password1 = findViewById<EditText>(R.id.register1PW)
@@ -43,11 +49,12 @@ class RegisterActivity : AppCompatActivity() {
                 register = findViewById<Button>(R.id.register)
                 login = findViewById<Button>(R.id.login)
 
-                var eye1Open=getDrawable(R.drawable.ic_baseline_remove_red_eye_24)
-                var eye1Close=getDrawable(R.drawable.ic_baseline_visibility_off_24)
+                var eye1Open=getDrawable(R.drawable.ic_baseline_visibility_off_24)
+                var eye1Close=getDrawable(R.drawable.ic_baseline_remove_red_eye_24)
 
-                var eye2Open=getDrawable(R.drawable.ic_baseline_remove_red_eye_24)
-                var eye2Close=getDrawable(R.drawable.ic_baseline_visibility_off_24)
+                userDao=AppDatabase.getDatabaseSingleton2(this).userDao()
+               //准备好数据库和借口到dao实例
+                //createUserDao()
 
                 eye1.setOnClickListener {
                         flag1=!flag1
@@ -67,11 +74,11 @@ class RegisterActivity : AppCompatActivity() {
                         flag2=!flag2
                         //此时显示明文
                         if(flag2){
-                                eye2.setImageDrawable(eye2Open)
+                                eye2.setImageDrawable(eye1Open)
                                 password2.transformationMethod=HideReturnsTransformationMethod.getInstance()
                                 password2.setSelection(password2.text.length)
                         }else{
-                                eye2.setImageDrawable(eye2Close)
+                                eye2.setImageDrawable(eye1Close)
                                 password2.transformationMethod=PasswordTransformationMethod.getInstance()
                                 password2.setSelection(password2.text.length)
                         }
@@ -79,29 +86,40 @@ class RegisterActivity : AppCompatActivity() {
 
                 register.setOnClickListener {
                        if(name.text.length===0){
-                               errorMess.setText("用户名不能为空!")
+                               errorMess.text="用户名不能为空!"
                        }else if(password1.text.toString()!=password2.text.toString()){
-                               errorMess.setText("两次密码输入不一致！")
+                               errorMess.text="两次密码输入不一致！"
                        }else{
-                               success=true
-                               errorMess.setText("密码设置成功，请点击登录按钮去登录吧！")
-
+                               var username=name.text.toString()
+                               if(userDao.queryUserByName(username)!=null){
+                                       errorMess.text="用户名已存在！"
+                               }else{
+                                       success=true
+                                       var password=password1.text.toString()
+                                       var user=User(username,password)
+                                       userDao.insertUser(user)
+                                       errorMess.text="密码设置成功，请点击登录按钮去登录吧！"
+                               }
                        }
                 }
                 /*点击之后，将错误提示信息关闭掉*/
                 name.setOnClickListener{
-                        errorMess.setText("")
+                        errorMess.text=""
                 }
                 password1.setOnClickListener{
-                        errorMess.setText("")
+                        errorMess.text=""
                 }
                 password2.setOnClickListener{
-                        errorMess.setText("")
+                        errorMess.text=""
                 }
 
                 login.setOnClickListener {
-                        startActivity(Intent(this,MainActivity::class.java))
 
+                        var intent=Intent()
+                        intent.putExtra("username",name.text.toString())
+                        setResult(RESULT_OK,intent)
+                        startActivity(Intent(this,MainActivity::class.java))
+                        finish()
                 }
         }
 
@@ -109,15 +127,7 @@ class RegisterActivity : AppCompatActivity() {
         override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
                 if (ev.action == MotionEvent.ACTION_DOWN) {
                         val view = currentFocus
-                        //打印出x和y的坐标位置
-
-                        // errorMess.setText("${arr[0]}和${arr[1]}.右边界：${right},下边界为${buttom},触摸的坐标为${ev.getX()}和${ev.getY()}")
                         if (KeyboardUtils.isShouldHideKeyBord(view, ev)) {
-                               /* var arr= intArrayOf(0,0)
-                                view?.getLocationInWindow(arr)
-                                var right=arr[0]+view!!.width
-                                var top=arr[1]+view!!.height
-                                errorMess.setText("触摸的坐标为${view!!.width}和${view!!.height} 有边界和下边界为为${right}和${top}")*/
                                 KeyboardUtils.hintKeyBoards(view)
                         }
                 }

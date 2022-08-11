@@ -1,18 +1,28 @@
 package com.hikvision.mykotlintest
 
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.lifecycleScope
+import com.hikvision.mykotlintest.database.database.AppDatabase
+import kotlinx.coroutines.launch
 
 class ThanksActivity : AppCompatActivity() {
         private lateinit var username: String
         //对所有的fragment的activity声明变量
+        private lateinit var mainTitle:TextView
+        private lateinit var weixintianjia:ImageView
+
         private  var messageActivity: MessageActivity? = null
         private  var addressActivity: AddressActivity?=null
         private  var foundActivity: FoundActivity?=null
@@ -45,6 +55,8 @@ class ThanksActivity : AppCompatActivity() {
                 super.onCreate(savedInstanceState)
                 requestWindowFeature(Window.FEATURE_NO_TITLE)
                 setContentView(R.layout.thanks_activity)
+                 mainTitle=findViewById(R.id.mainTitle)
+                weixintianjia=findViewById(R.id.weixintianjia)
                 //为控件进行赋初始值
                 initValues()
                 support=supportFragmentManager
@@ -53,7 +65,7 @@ class ThanksActivity : AppCompatActivity() {
                 var display = findViewById<TextView>(R.id.display)
                 var intent = intent
                 username = intent.getStringExtra("name").toString()
-                display.setText("""欢迎您用户名为：【${intent.getStringExtra("name")}】的用户""")
+                display.text="""欢迎您用户名为：【${intent.getStringExtra("name")}】的用户"""
                 //初始默认选中第一个message
 
                 //已经初始化好了当前的所有的数，现在需要对案件加上一个监听事件，如果点击了对应的地方，就可以改变fragment
@@ -61,6 +73,7 @@ class ThanksActivity : AppCompatActivity() {
                         changeFragmentAndColor(0)
                 }
                 addressPart.setOnClickListener {
+
                         changeFragmentAndColor(1)
                 }
                 foundPart.setOnClickListener {
@@ -94,6 +107,7 @@ class ThanksActivity : AppCompatActivity() {
 
         }
 
+        @SuppressLint("ResourceAsColor")
         fun changeFragmentAndColor(num:Int){
                 //在每次开始变化fragment之前，先将所有的fragment停止掉,颜色全都改回去
                 clearColor()
@@ -106,19 +120,45 @@ class ThanksActivity : AppCompatActivity() {
                         0->{
                                 messagePicture.setBackgroundColor(touchColor)
                                 messageText.setTextColor(touchColor)
+                                mainTitle.text=messageText.text
+
+                                //控制微信添加按钮的显示
+                                weixintianjia.visibility=View.VISIBLE
+                                weixintianjia.setImageResource(R.drawable.ic_baseline_add_circle_outline_24)
+
+                                weixintianjia.setOnClickListener {
+                                       // startActivity(Intent(this,SendMessageActivity::class.java))
+                                        Toast.makeText(this,"此界面将来添加扫一扫群聊等功能",Toast.LENGTH_SHORT).show()
+                                }
+
                                 //转换activity
                                 if(messageActivity==null){
                                         messageActivity= MessageActivity()
                                         transaction.add(R.id.content, messageActivity!!)
+
                                 }else{
                                         transaction.show(messageActivity!!)
                                 }
+
 
                         }
                         1->{
                                 addressPicture.setBackgroundColor(touchColor)
                                 addressText.setTextColor(touchColor)
+                                //把图片设为可见
+                                weixintianjia.visibility=View.VISIBLE
+                                weixintianjia.setImageResource(R.drawable.ic_baseline_person_add_alt_1_24)
+                                //给当前的添加按钮添加一个监听事件，用来添加朋友
+                                weixintianjia.setOnClickListener {
+                                        startActivity(Intent(this,FriendAddActivity::class.java))
+                                        //我想销毁当前的fragment，怎么办
+                                }
+
+                                mainTitle.text=addressText.text
                                 //改变好颜色之后，就进行页面的加载
+
+                                //此时应该是要展示数据，此数据应该在哪里
+
                                 if(addressActivity==null){
                                         addressActivity=AddressActivity()
                                         transaction.add(R.id.content, addressActivity!!)
@@ -129,7 +169,7 @@ class ThanksActivity : AppCompatActivity() {
                         2->{
                                 foundPicture.setBackgroundColor(touchColor)
                                 foundText.setTextColor(touchColor)
-
+                                mainTitle.text=foundText.text
                                 if(foundActivity==null){
                                         foundActivity= FoundActivity()
                                         transaction.add(R.id.content,foundActivity!!)
@@ -141,6 +181,7 @@ class ThanksActivity : AppCompatActivity() {
                         3->{
                                 myPicture.setBackgroundColor(touchColor)
                                 myText.setTextColor(touchColor)
+                                mainTitle.text=myText.text
                                 if(myActivity==null){
                                         myActivity=MyActivity()
                                         transaction.add(R.id.content,myActivity!!)
@@ -152,7 +193,12 @@ class ThanksActivity : AppCompatActivity() {
                 transaction.commit()
         }
         //把颜色改回白色
+        @SuppressLint("ResourceAsColor")
         fun clearColor(){
+
+                //隐藏微信添加按钮
+                weixintianjia.visibility= View.INVISIBLE
+                weixintianjia.setBackgroundColor(R.color.black)
 
                 messagePicture.setBackgroundColor(backColor)
                 messageText.setTextColor(backColor)

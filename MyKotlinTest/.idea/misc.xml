@@ -4,15 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android_sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.21979166666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2365" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_add_circle_outline_24.xml" value="0.271" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_group_24.xml" value="0.2395" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.2765" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_lock_open_24.xml" value="0.1805" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_message_24.xml" value="0.2395" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_perm_identity_24.xml" value="0.2395" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.233" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_person_add_alt_1_24.xml" value="0.271" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_pregnant_woman_24.xml" value="0.23" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.2715" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_baseline_widgets_24.xml" value="0.2395" />
-        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2765" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/addredd_list_item.xml" value="0.21145833333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/address_add_friend.xml" value="0.28020833333333334" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/address_fragment.xml" value="0.23489583333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/address_friend_info_display.xml" value="0.28020833333333334" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/chat_layout.xml" value="0.18072916666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/chat_recyclerview_item_left_receive.xml" value="0.18072916666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/chat_recycleview_item_right_send.xml" value="0.18072916666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/content_keyboard.xml" value="0.20416666666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/database_practice.xml" value="0.28020833333333334" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/found_layout.xml" value="0.23489583333333333" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/found_list_item.xml" value="0.21145833333333333" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fragment_test1.xml" value="0.171875" />
@@ -20,7 +34,9 @@
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fruit_layout.xml" value="0.21979166666666666" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/fruit_main.xml" value="0.25" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/hello_master.xml" value="0.26666666666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/keyboard_main.xml" value="0.20416666666666666" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/layout.xml" value="0.33" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/message_add.xml" value="0.2234375" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/message_fragment.xml" value="0.23489583333333333" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/message_list_item.xml" value="0.21145833333333333" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/my_fragment.xml" value="0.23489583333333333" />
@@ -31,6 +47,12 @@
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/register_activity.xml" value="0.25" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/thanks_activity.xml" value="0.25" />
         <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/thanks_again.xml" value="0.22" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/layout/view_keyboard_preview.xml" value="0.20416666666666666" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/menu/friend_activity_menu.xml" value="0.2234375" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2365" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2365" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/xml/keyboard_letter.xml" value="0.21927083333333333" />
+        <entry key="..\:/kotlinPro/MyKotlinTest/app/src/main/res/xml/keyboard_num.xml" value="0.18" />
       </map>
     </option>
   </component>

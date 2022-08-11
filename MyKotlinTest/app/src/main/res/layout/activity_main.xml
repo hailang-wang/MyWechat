@@ -2,19 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:background="#B50A35"
-    >
+    android:background="#B50A35">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎来到微信登录界面"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/dou2" />
+
+        </androidx.cardview.widget.CardView>
         <EditText
             android:id="@+id/textOfName"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -79,12 +104,11 @@
             android:gravity="center"
             />
         <TextView
-            android:id="@+id/register"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#DDC91F"
             android:text="第一次登录？点击注册"
-            android:onClick="register"
             android:gravity="center"
             />
 
@@ -104,11 +128,11 @@
             android:text="确认"/>
 
         <Button
-            android:id="@+id/btnCan"
+            android:id="@+id/goToRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:text="取消"/>
+            android:text="注册"/>
     </LinearLayout>
 
 
@@ -137,5 +161,36 @@
             android:text="点击显示RecyclerView新闻清单"/>
 
     </LinearLayout>
+
+
+    <!--数据库联系的跳转界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        <Button
+            android:id="@+id/goToDatabasePractice"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="转到数据库操作界面"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/goToKeyBoard"
+        android:layout_gravity="center"
+        android:text="点击去测试自定义的键盘"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 </LinearLayout>

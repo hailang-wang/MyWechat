@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hikvision.mykotlintest">
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,21 +12,38 @@
         android:theme="@style/Theme.MyKotlinTest">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="微信"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <!--新建一个activity要注册到这个清单列表中-->
-        <activity android:name=".ThanksActivity"></activity>
+        <activity
+            android:name=".ThanksActivity"
+            android:label="微信"/>
+
         <activity android:name=".ThankAgain"/>
-        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".RegisterActivity"
+            android:label="微信"
+            />
+
         <activity android:name=".MyListViewTest"/>
         <activity android:name=".FruitListMain"/>
 
         <activity android:name=".recycle.NewsMainActivity"/>
+        <activity android:name=".DataBaseActivity"/>
+        <!--展示朋友的聊天记录的界面-->
+        <activity android:name=".ChatActivity"/>
+        <!--展示朋友信息的界面-->
+        <activity android:name=".FriendInfoActivity"/>
+
+        <activity android:name=".FriendAddActivity"/>
+        <!--添加消息的界面-->
+        <activity android:name=".SendMessageActivity"/>
+
     </application>
 
 </manifest>
